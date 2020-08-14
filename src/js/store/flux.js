@@ -17,6 +17,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(function(responseAsJson) {
 						// Do stuff with the JSON
 						setStore({ arrayPeople: responseAsJson.results });
+						console.log(responseAsJson.results);
 					})
 					.catch(function(error) {
 						console.log("Looks like there was a problem: \n", error);
@@ -34,6 +35,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(function(responseAsJson) {
 						// Do stuff with the JSON
 						setStore({ arrayPlanets: responseAsJson.results });
+						console.log(responseAsJson.results);
 					})
 					.catch(function(error) {
 						console.log("Looks like there was a problem: \n", error);
