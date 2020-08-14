@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 
 export function Info() {
-	const { store, actions } = useContext(Context);
+	const { store} = useContext(Context);
 	return (
 		<div className="container line">
 			<div className="row d-flex justify-content-around py-4">
@@ -10,7 +10,6 @@ export function Info() {
 					if (index == 0) {
 						return (
 							<div key={index}>
-								{/* se pone key para que map lo reconozca y no vuelva a leer esa posicion*/}
 								<h3>Name</h3>
 								<p>{item.name}</p>
 								<div className="col-1">
