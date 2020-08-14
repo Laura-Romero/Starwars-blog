@@ -1,29 +1,38 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Context } from "../store/appContext";
 
 export function Info() {
+	const { store, actions } = useContext(Context);
 	return (
 		<div className="container line">
 			<div className="row d-flex justify-content-around py-4">
-				<div className="col-1">
-					<span>Name</span>
-				</div>
-
-				<div className="col-1">
-					<span>Climate</span>
-				</div>
+				{store.arrayPeople.map((item, index) => {
+					if (index == 0) {
+						return (
+							<div key={index}>
+								{/* se pone key para que map lo reconozca y no vuelva a leer esa posicion*/}
+								<h3>Name</h3>
+								<p>{item.name}</p>
+								<div className="col-1">
+									<span>{item.gender}</span>
+								</div>
+								<div className="col-1">
+									<span>{item.films}</span>
+								</div>
+							</div>
+						);
+					}
+				})}
 
 				<div className="col-1">
 					<span>Population</span>
 				</div>
-
 				<div className="col-1">
 					<span>Orbital Period</span>
 				</div>
-
 				<div className="col-1">
 					<span>Rotation Period</span>
 				</div>
-
 				<div className="col-1">
 					<span>Diameter</span>
 				</div>
