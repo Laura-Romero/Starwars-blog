@@ -25,3 +25,31 @@ span{
     color: red;
     margin:auto;
 }
+.card{
+    width: 20rem;
+    margin-left: 5rem;
+}
+
+.cardtop{
+background: grey;
+width: 20rem;
+height: 15rem;
+}
+
+.learnMore{
+    border-color: rgb(0, 255, 255);
+    background-color: white;
+    width: 8rem;
+    color: rgb(0, 255, 255);
+    margin-bottom: 1.5rem;
+    margin-left: 1.5rem;
+}
+
+.fa-heart{
+    font-size: 2rem;
+    color: yellow;
+    border-style: solid;
+    border-color: yellow;
+    width: 2.5rem;
+    padding-left: 1.5;
+}
