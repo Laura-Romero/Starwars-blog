@@ -3,7 +3,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			arrayPlanets: [],
 			arrayPeople: []
- 		},
+		},
 		actions: {
 			getCharacter: () => {
 				fetch("https://swapi.dev/api/people/")
