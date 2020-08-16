@@ -3,6 +3,7 @@ import { Context } from "../store/appContext";
 import "../../styles/home.scss";
 import { Header } from "../component/header";
 import { Card } from "../component/card.js";
+import { DetailsView } from "./details-info-view";
 export const Home = () => {
 	const { store } = useContext(Context);
 	return (

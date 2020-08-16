@@ -1,67 +1,65 @@
-import React, { useContext } from "react";
-import { Context } from "../store/appContext";
+import React from "react";
+import PropTypes from "prop-types";
 
-export function Info() {
-	const { store} = useContext(Context);
+export function Info(props) {
+	let person = props.person;
+
 	return (
 		<div className="container line">
 			<div className="row d-flex justify-content-around py-4">
-				{store.arrayPeople.map((item, index) => {
-					if (index == 0) {
-						return (
-							<div key={index}>
-								<h3>Name</h3>
-								<p>{item.name}</p>
-								<div className="col-1">
-									<span>{item.gender}</span>
-								</div>
-								<div className="col-1">
-									<span>{item.films}</span>
-								</div>
-							</div>
-						);
-					}
-				})}
+				<div className="col-1">
+					<span>Name</span>
+				</div>
 
 				<div className="col-1">
-					<span>Population</span>
+					<span>Gender</span>
 				</div>
+
 				<div className="col-1">
-					<span>Orbital Period</span>
+					<span>Birthday</span>
 				</div>
+
 				<div className="col-1">
-					<span>Rotation Period</span>
+					<span>Color Eyes</span>
 				</div>
+
 				<div className="col-1">
-					<span>Diameter</span>
+					<span>Color Hair</span>
+				</div>
+
+				<div className="col-1">
+					<span>Films</span>
 				</div>
 			</div>
 
 			<div className="row d-flex justify-content-around">
 				<div className="col-1">
-					<span>Tatooine</span>
+					<span>{person.name}</span>
 				</div>
 
 				<div className="col-1">
-					<span>arid</span>
+					<span>{person.gender}</span>
 				</div>
 
 				<div className="col-1">
-					<span>200000</span>
+					<span>{person.birth_year}</span>
 				</div>
 
 				<div className="col-1">
-					<span>304</span>
+					<span>{person.eye_color}</span>
 				</div>
 
 				<div className="col-1">
-					<span>23</span>
+					<span>{person.hair_color}</span>
 				</div>
 
 				<div className="col-1">
-					<span>10465</span>
+					<span>{person.film}</span>
 				</div>
 			</div>
 		</div>
 	);
 }
+Info.propTypes = {
+	person: PropTypes.object
+};

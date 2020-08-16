@@ -2,9 +2,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			arrayPlanets: [],
-			arrayPeople: []
+			arrayPeople: [],
+			detailObject: {}
 		},
 		actions: {
+			infoDetails: person => {
+				setStore({ detailObject: person });
+			},
 			getCharacter: () => {
 				fetch("https://swapi.dev/api/people/")
 					.then(function(response) {
