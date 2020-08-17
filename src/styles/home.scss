@@ -1,12 +1,19 @@
+
+h1{
+    color: red;
+}
+
+
 .card{
-    width: 20rem;
-    margin-left: 5rem;
+    min-width: 20rem;
+    margin-right: 3rem;
+    border-style: ridge;
 }
 
 .cardtop{
 background: grey;
-width: 20rem;
 height: 15rem;
+
 }
 
 .learnMore{
@@ -16,13 +23,46 @@ height: 15rem;
     color: rgb(0, 255, 255);
     margin-bottom: 1.5rem;
     margin-left: 1.5rem;
+    padding: 0.5rem;
 }
 
-.fa-heart{
+.fa-heart::before{
     font-size: 2rem;
     color: yellow;
     border-style: solid;
     border-color: yellow;
-    width: 2.5rem;
-    padding-left: 1.5;
+    padding: 0.3rem;
+    margin-right: 1.5rem;
 }
+
+.cardContainer{
+    overflow-x: scroll;
+}
+
+h1{
+    color: red;
+}
+
+.Planets{
+    min-width: 20rem;
+    margin-left: 3rem;
+    border-style: ridge;
+}
+
+.cardbox{
+    background-color: gray;
+    min-width: 20rem;
+    min-height: 15rem;
+    
+}
+
+.learnMore1{
+      border-color: rgb(0, 255, 255);
+    background-color: white;
+    width: 8rem;
+    color: rgb(0, 255, 255);
+    margin-bottom: 1.5rem;
+    margin-left: 1.5rem;
+    padding: 0.5rem;
+}
+
